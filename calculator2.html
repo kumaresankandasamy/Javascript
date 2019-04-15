@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calculator</title>
+</head>
+<body>
+	<label>first value:</label>
+	<input type="text" id="n1">
+	<br>
+	<br>
+	<label>second value:</label>
+	<input type="text" id="n2">
+	<select id="operators">
+		<option value="+">+</option>
+		<option value="-">-</option>
+		<option value="*">*</option>
+		<option value="/">/</option>
+	</select>
+	<button onclick="calc();">=</button>
+	<input type="text" id="result">
+
+</body>
+<script type="text/javascript">
+	function calc(){
+		var n1=parseInt(document.getElementById('n1').value);
+		var n2=parseInt(document.getElementById('n2').value);
+		var op=document.getElementById('operators').value;
+		switch(op){
+			case '+':
+			document.getElementById('result').value = n1+n2;
+			break;
+			case '-':
+			document.getElementById('result').value=n1-n2;
+			break;
+			case '*':
+			document.getElementById('result').value=n1*n2;
+			break;
+			case '/':
+			document.getElementById('result').value=n1/n2;
+			break;
+			default:
+			console.log("wrong value");
+			break;
+		}
+
+	}
+	
+
+</script>
+
+</html>
